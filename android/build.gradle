@@ -231,6 +231,64 @@ android {
 
 
         }
+
+        devfestBerlin {
+            applicationId = "de.devfest_berlin.android.year2014"
+            uniqueContentIdentifier = "event1134"
+            manifestPlaceholders = [
+                    uniqueContentIdentifier: uniqueContentIdentifier,
+                    mapsApiKey             : devfestberlin14_android_maps_api_key
+            ]
+
+            buildConfigField "boolean", "HAS_VIDEO_LIBRARY", "false"
+            buildConfigField "boolean", "SUPPORTS_PEER_BADGE_SCANNING", "false"
+            buildConfigField "boolean", "SUPPORTS_REMOTE_VIEWING", "false"
+            buildConfigField "boolean", "USE_EXTERNAL_MAPS", "true"
+
+            buildConfigField "double", "VENUE_LATITUDE", "52.51244"
+            buildConfigField "double", "VENUE_LONGITUDE", "13.431129"
+            buildConfigField "double", "VENUE_CAMERA_LATITUDE", "52.51244"
+            buildConfigField "double", "VENUE_CAMERA_LONGITUDE", "13.431129"
+
+            buildConfigField "String", "CONFERENCE_NAME", "\"DevFest Berlin 2014\""
+            buildConfigField "String", "CONFERENCE_DATA_MANIFEST_URL", "\"" + devfestberlin14_android_manifest + "\""
+            buildConfigField "String", "OAUTH_APP_NAME", "\"DevFestBerlin2014\""
+            buildConfigField "String", "OAUTH_API_KEY", "\"" + devfestberlin14_android_oauth_api_key + "\""
+            buildConfigField "String", "GCM_API_KEY", "\"" + devfestberlin14_gcm_api_key + "\""
+            buildConfigField "String", "GCM_SENDER_ID", "\"" + devfestberlin14_gcm_sender_id + "\""
+            buildConfigField "String", "GCM_URL", "\"" + devfestberlin14_gcm_url + "\""
+
+            buildConfigField "String", "BOOTSTRAP_DATA_TIMESTAMP", "\"Thu, 6 Nov 2014 22:00:00 CET\""
+            buildConfigField "String", "CONFERENCE_GAME_PACKAGE_NAME", "\"\""
+            buildConfigField "String", "CONFERENCE_HASHTAG", "\"#DevFestBerlin\""
+            buildConfigField "String", "CONFERENCE_HASHTAG_PREFIX", "\"#DevFestBerlin\""
+            buildConfigField "String", "CONFERENCE_TIMEZONE", "\"Europe/Berlin\""
+            buildConfigField "String", "FEEDBACK_API_CODE", "\"" + devfestberlin14_feedback_api_code + "\""
+            buildConfigField "String", "FEEDBACK_API_KEY", "\"" + devfestberlin14_feedback_api_key + "\""
+            buildConfigField "String", "FEEDBACK_SURVEY_ID", "\"" + devfestberlin14_feedback_survey_id + "\""
+            buildConfigField "String", "FEEDBACK_URL", "\"" + devfestberlin14_feedback_url + "\""
+            buildConfigField "String", "UNIQUE_CONTENT_IDENTIFIER", "\"" + uniqueContentIdentifier + "\""
+            buildConfigField "String", "WIFI_SSID", "\"\""
+            buildConfigField "String", "WIFI_PASSPHRASE", "null"
+
+            buildConfigField "Class<? extends android.app.Fragment>", "SOCIAL_FRAGMENT_CLASS",
+                    "com.google.samples.apps.iosched.ui.TwitterSocialFragment.class"
+
+            buildConfigField "long[][]", "CONFERENCE_DAYS", "new long[][] {\n" +
+                    "            {  " +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-21T08:00:00.000Z\"),\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-22T07:59:59.999Z\")\n" +
+                    "            }, {\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-22T08:00:00.000Z\"),\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-23T07:59:59.999Z\")\n" +
+                    "            }, {\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-23T08:00:00.000Z\"),\n" +
+                    "               com.google.samples.apps.iosched.util.ParserUtils.parseTime(\"2014-11-24T07:59:59.999Z\")\n" +
+                    "            },\n" +
+                    "        }"
+
+
+        }
     }
 }
 

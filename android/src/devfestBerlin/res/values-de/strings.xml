@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_setup_wifi_after_i_o_start">DevFest Berlin ist da! Möchten Sie das Konferenz-WiFi jetzt hinzufügen?</string>
+    <string name="question_setup_wifi_before_i_o_start">DevFest Berlin steht vor der Tür! Möchten Sie das Konferenz-WiFi jetzt hinzufügen?</string>
+    <string name="welcome_to_google_i_o_app">Willkommen zur DevFest Berlin-App!</string>
+</resources>
