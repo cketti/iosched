@@ -207,6 +207,8 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
         int heightNormal = res.getDimensionPixelSize(R.dimen.my_schedule_item_height);
         int heightBreak = ViewGroup.LayoutParams.WRAP_CONTENT;
         int heightPast = res.getDimensionPixelSize(R.dimen.my_schedule_item_height_past);
+        int sessionTitleMaxLines = res.getInteger(R.integer.my_schedule_session_title_max_lines);
+        int breakTitleMaxLines = res.getInteger(R.integer.my_schedule_break_title_max_lines);
 
         long now = UIUtils.getCurrentTime(view.getContext());
         boolean showEndTime = false;
@@ -269,6 +271,7 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             slotTitleView.setText(R.string.browse_sessions);
             slotTitleView.setTextColor(res.getColor(R.color.theme_primary));
             slotTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
+            slotTitleView.setMaxLines(sessionTitleMaxLines);
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2));
@@ -289,6 +292,7 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             slotTitleView.setText(item.title);
             slotTitleView.setTextColor(res.getColor(R.color.body_text_1));
             slotTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
+            slotTitleView.setMaxLines(breakTitleMaxLines);
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2));
@@ -349,6 +353,7 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
                     ? Color.WHITE
                     : res.getColor(R.color.body_text_1_inverse));
             mLUtils.setMediumTypeface(slotTitleView);
+            slotTitleView.setMaxLines(sessionTitleMaxLines);
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2_inverse));
