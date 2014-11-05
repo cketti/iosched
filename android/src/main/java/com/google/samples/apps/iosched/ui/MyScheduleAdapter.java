@@ -281,7 +281,13 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             view.setTag(R.id.myschedule_uri_tagkey, uri);
 
         } else if (item.type == ScheduleItem.BREAK) {
-            view.getLayoutParams().height = isPastDuringConference ? heightPast : heightBreak;
+            if (isPastDuringConference) {
+                view.getLayoutParams().height = heightPast;
+                slotTitleView.setMaxLines(sessionTitleMaxLines);
+            } else {
+                view.getLayoutParams().height = heightBreak;
+                slotTitleView.setMaxLines(breakTitleMaxLines);
+            }
             boxView.setBackgroundResource(R.drawable.schedule_item_break);
             boxView.setForeground(null);
             bgImageView.setVisibility(View.GONE);
@@ -292,7 +298,6 @@ public class MyScheduleAdapter implements ListAdapter, AbsListView.RecyclerListe
             slotTitleView.setText(item.title);
             slotTitleView.setTextColor(res.getColor(R.color.body_text_1));
             slotTitleView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
-            slotTitleView.setMaxLines(breakTitleMaxLines);
             if (slotSubtitleView != null) {
                 slotSubtitleView.setText(item.subtitle);
                 slotSubtitleView.setTextColor(res.getColor(R.color.body_text_2));
