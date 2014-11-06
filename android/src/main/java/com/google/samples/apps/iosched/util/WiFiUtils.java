@@ -33,6 +33,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.Html;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.widget.TextView;
@@ -236,6 +237,10 @@ public class WiFiUtils {
      * (in the overflow menu, for instance).
      */
     public static boolean shouldOfferToSetupWifi(final Context context, boolean actively) {
+        if (TextUtils.isEmpty(Config.WIFI_SSID)) {
+            return false;
+        }
+
         long now = UIUtils.getCurrentTime(context);
         if (now < Config.WIFI_SETUP_OFFER_START) {
             // too early to offer
