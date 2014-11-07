@@ -32,22 +32,8 @@ android {
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"
+        applicationId "de.devfest_berlin.android.year2014"
     }
-
-    productFlavors {
-        io2014 {
-            applicationId "com.google.samples.apps.iosched"
-        }
-
-        droidconuk {
-            applicationId "com.conferenceengineer.iosched.event1002"
-        }
-
-        devfestBerlin {
-            applicationId "de.devfest_berlin.android.year2014"
-        }
-    }
-
 
     signingConfigs {
         debug {
