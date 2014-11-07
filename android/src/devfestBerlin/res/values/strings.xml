@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DevFest Berlin 2014</string>
+    <string name="question_setup_wifi_after_i_o_start">DevFest Berlin is here! Would you like to configure the conference WiFi now?</string>
+    <string name="question_setup_wifi_before_i_o_start">DevFest Berlin is coming up! Would you like to configure the conference WiFi now?</string>
+    <string name="welcome_to_google_i_o_app">Welcome to the DevFest Berlin app!</string>
+    <string name="map_label_venue" translatable="false">Immobilien Scout GmbH</string>
+</resources>
