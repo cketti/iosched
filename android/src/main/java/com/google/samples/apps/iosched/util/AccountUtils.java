@@ -51,9 +51,8 @@ public class AccountUtils {
     private static final String PREFIX_PREF_GCM_KEY = "gcm_key_";
 
     public static final String AUTH_SCOPES[] = {
-            Scopes.PLUS_LOGIN,
-            Scopes.DRIVE_APPFOLDER,
-            "https://www.googleapis.com/auth/userinfo.email"};
+            Scopes.PROFILE,
+            Scopes.DRIVE_APPFOLDER};
 
     static final String AUTH_TOKEN_TYPE;
 

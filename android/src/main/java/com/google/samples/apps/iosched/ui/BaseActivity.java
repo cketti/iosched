@@ -250,9 +250,9 @@ public abstract class BaseActivity extends ActionBarActivity implements
         // Intent in the app.
         UIUtils.enableDisableActivitiesByFormFactor(this);
 
-        if (savedInstanceState == null) {
-            registerGCMClient();
-        }
+//        if (savedInstanceState == null) {
+//            registerGCMClient();
+//        }
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         sp.registerOnSharedPreferenceChangeListener(this);
@@ -1215,7 +1215,7 @@ public abstract class BaseActivity extends ActionBarActivity implements
 
         setupAccountBox();
         populateNavDrawer();
-        registerGCMClient();
+//        registerGCMClient();
     }
 
     @Override
@@ -1450,7 +1450,7 @@ public abstract class BaseActivity extends ActionBarActivity implements
         }
 
         try {
-            GCMRegistrar.onDestroy(this);
+//            GCMRegistrar.onDestroy(this);
         } catch (Exception e) {
             LOGW(TAG, "C2DM unregistration error", e);
         }
