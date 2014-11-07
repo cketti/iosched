@@ -36,6 +36,7 @@ import com.google.samples.apps.iosched.R;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
@@ -209,7 +210,8 @@ public class HomeListenerService extends WearableListenerService
                 .setDeleteIntent(deleteIntent)
                 .setContentText(sessionName)
                 .extend(new NotificationCompat.WearableExtender()
-                        .setDisplayIntent(showCardIntent));
+                        .setDisplayIntent(showCardIntent)
+                        .setBackground(BitmapFactory.decodeResource(getResources(), R.drawable.notification_background)));
 
         NotificationManagerCompat.from(this)
                 .notify(sessionId, NOTIFICATION_ID, builder.build());
