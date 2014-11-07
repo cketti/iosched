@@ -3,4 +3,20 @@
     <string name="question_setup_wifi_after_i_o_start">DevFest Berlin ist da! Möchten Sie das Konferenz-WiFi jetzt hinzufügen?</string>
     <string name="question_setup_wifi_before_i_o_start">DevFest Berlin steht vor der Tür! Möchten Sie das Konferenz-WiFi jetzt hinzufügen?</string>
     <string name="welcome_to_google_i_o_app">Willkommen zur DevFest Berlin-App!</string>
+
+    <string name="empty_widget_text_signed_out">Tippen Sie für die Anmeldung auf das Logo oben und beginnen Sie mit der Nutzung der App.</string>
+    <string name="navdrawer_item_explore_a11y">Erkunden</string>
+    <string name="pref_analytics_enabled_description">Wenn aktiviert, werden anonyme Nutzungsstatistiken an den Entwickler gesendet.</string>
+    <string name="pref_local_times_description">Wenn aktiviert, werden Zeiten in der Lokalzeit Ihres Geräts angezeigt.</string>
+    <string name="pref_notify_feedback_title">Benachrichtigen, um Feedback zu senden</string>
+    <string name="pref_notify_starred_sessions_title">Benachrichtigen, wenn meine Sitzungen beginnen</string>
+    <string name="title_share">Teilen über</string>
+    <string name="decline">Ablehnen</string>
+
+    <string name="twitter_stream_error">Twitter-Feed konnte nicht geladen werden.</string>
+    <string name="empty_twitter_stream">Keine Tweets gefunden</string>
+    <string name="description_compose">Neuer Tweet</string>
+
+    <string name="session_starting_by">Von %s</string>
+    <string name="session_starting_in">In %s</string>
 </resources>
