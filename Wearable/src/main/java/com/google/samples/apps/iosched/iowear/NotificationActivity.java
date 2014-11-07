@@ -55,7 +55,9 @@ public class NotificationActivity extends Activity {
             final int notificationId = getIntent()
                     .getIntExtra(HomeListenerService.KEY_NOTIFICATION_ID, 0);
             mSession.setText(sessionName);
-            mSpeaker.setText(speakers + " - " + sessionRoom);
+            if (speakers != null && sessionRoom != null) {
+                mSpeaker.setText(speakers + " - " + sessionRoom);
+            }
             mContent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
